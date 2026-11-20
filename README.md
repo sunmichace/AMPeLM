@@ -17,8 +17,8 @@ Inference truncates or pads sequences to 256 residues, uses batches of 64, and p
 
 | Script | What it does |
 | --- | --- |
-| `pretrain_uniprot_bionemo_256MLP.py` | Pretrains an ESM2 backbone using masked language modeling and exports weights at selected training steps. |
-| `finetune_classifier_rawdata_256.py` | Fine-tunes a 6M ESM2 backbone with a three-layer MLP head at multiple checkpoint steps. |
+| `pretrain_uniprot_bionemo_256.py` | Pretrains an ESM2 backbone using masked language modeling and exports weights at selected training steps. |
+| `finetune_classifier_rawdata_256MLP.py` | Fine-tunes a 6M ESM2 backbone with a three-layer MLP head at multiple checkpoint steps. |
 | `finetune_classifier_rawdata_256CNN.py` | Fine-tunes the step-250 6M ESM2 checkpoint with a three-layer 1D CNN head. |
 | `finetune_classifier_rawdata_256LSTM.py` | Fine-tunes the step-250 6M ESM2 checkpoint with a three-layer unidirectional LSTM head. |
 
