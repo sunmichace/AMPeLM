@@ -1,5 +1,7 @@
 # Peptide Sequence Classification
 
+ESM-PeLM is a compact peptide-focused language model, whereas AMPeLM is an AMP-specific classifier developed by fine-tuning ESM-PeLM. ESM-PeLM uses a six-layer Transformer encoder based on the ESM-2 architecture and was pretrained from scratch with a masked-language-modeling objective on 187,382,018 protein-derived sequence fragments of 256 amino acids, representing 65,182,365 UniRef50 clusters. The resulting approximately 8-million-parameter encoder was adapted for AMP prediction using a balanced dataset of 105,994 nonredundant AMP sequences and an equal number of non-AMP sequences. AMPeLM achieved five-fold cross-validation accuracy, precision, recall, F1 score, and MCC of 0.977, 0.983, 0.971, 0.977, and 0.956, respectively. It enabled stringent genome-scale screening, identifying 30,290,851 consensus candidate AMPs. AMPeLM also supported short-peptide landscape analysis, comparative-genomic discovery, and iterative in silico evolution, with experimental validation demonstrating its utility for AMP discovery and engineering.
+
 These Python scripts train and evaluate binary classifiers for peptide sequences. The lightweight CNN works directly with amino acid tokens. The ESM2-based classifiers use a pretrained backbone with an MLP, CNN, or LSTM classification head.
 
 ## Lightweight CNN
